@@ -7,3 +7,7 @@ Además, está el [repositorio](https://github.com/kevin-powell/space-tourism) d
 ![Logo freeCodeCamp](https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png)
 
 Este proyecto es una práctica del manejo de CSS con FreeCodeCamp. El maestro es el gurú del CSS [Kevin Powell](https://www.youtube.com/kepowob).
+
+
+El maestro propone este [link](https://piccalil.li/blog/a-modern-css-reset/) para poner un CSS de "reset" moderno.
+`https://piccalil.li/blog/a-modern-css-reset/`
