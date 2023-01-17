@@ -99,12 +99,13 @@
     </section>
 
     <section class="childs-m-top" id="interactive-elements">
+        <!-- Elemento bloque 1: título -->
         <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
         
-        <!-- navigation -->
+        <!-- Elemento bloque 2: Navegación -->
         <div>
             <nav>
-                <ul class="primary-navigation underline-indicators flex">
+                <ul class="primary-navigation underline-indicators flex" style="justify-content: space-evenly;">
                     <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a>
                     <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a>
                     <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a>
@@ -112,28 +113,36 @@
             </nav>
         </div>
         
+        <!-- Elemento bloque 3 --> 
         <div class="flex">
-            <div style="margin-top: 5rem;">
+            <!-- Elemento inline-bloque 3.1: botón "Explore" --> 
+            <div style="margin-top: 5rem; flex-basis: 100%">
                 <!-- explore button -->
                 <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
             </div>
             
-            <div class="childs-m-top" style="margin-bottom: 50vh; --childs-m-top-space: 4rem">
-                <!-- Tabs -->
-                <div class="tab-list underline-indicators flex">
+            <!-- Elemento inline-bloque 3.2: Tabs, Dots y Numbers --> 
+            <div class="childs-m-top" style="margin-bottom: 50vh; --childs-m-top-space: 4rem; flex-basis: 100%">
+                <!-- Elemento inline-bloque 3.2.1: Tabs -->
+                <div class="gap-tab-list underline-indicators flex" style="justify-content: center;">
                     <button aria-selected="true" class="uppercase ff-sans-cond text-accent letter-spacing-2">Moon</button>
                     <button aria-selected="false" class="uppercase ff-sans-cond text-accent letter-spacing-2">Mars</button>
                     <button aria-selected="false" class="uppercase ff-sans-cond text-accent letter-spacing-2">Europa</button>
                 </div>
                 
-                <!-- Dots -->
-                <div class="dot-indicators flex">
+                <!-- Elemento inline-bloque 3.2.2: Dots -->
+                <div class="dot-indicators flex" style="justify-content: center;">
                     <button aria-selected="true"><span class="sr-only">Slide title</span></button>
                     <button aria-selected="false"><span class="sr-only">Slide title</span></button>
                     <button aria-selected="false"><span class="sr-only">Slide title</span></button>
                 </div>
                 
-                <!-- Numbers -->
+                <!-- Elemento inline-bloque 3.2.3: Numbers -->
+                <div class="numbers childs-m-top">
+                    <button aria-selected="true" class="ff-serif fs-500"><span class="sr-only">Slide title</span>1</button>
+                    <button aria-selected="false" class="ff-serif fs-500 text-white"><span class="sr-only">Slide title</span>2</button>
+                    <button aria-selected="false" class="ff-serif fs-500 text-white"><span class="sr-only">Slide title</span>3</button>
+                </div>
             </div>
         </div>
         
