@@ -11,3 +11,5 @@ Este proyecto es una práctica del manejo de CSS con FreeCodeCamp. El maestro es
 
 El maestro propone este [link](https://piccalil.li/blog/a-modern-css-reset/) para poner un CSS de "reset" moderno.
 `https://piccalil.li/blog/a-modern-css-reset/`
+
+Me quedé en el 2:36:00 del video
