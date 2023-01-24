@@ -59,21 +59,30 @@
   box-sizing: border-box;
 }
 
-/* Remove default margin */
+/* Reset margins */
 body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
 p,
 figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
+picture {
+    margin: 0; 
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
@@ -88,16 +97,17 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
   font-family: var(--ff-sans-normal);
-  font-size: var(--ff-400);
+  font-size: var(--fs-400);
   color: hsl( var(--clr-white) );
   background-color: hsl( var(--clr-dark) );
   line-height: 1.5;
   min-height: 100vh;
-
+  
   display: grid;
   grid-template-rows: min-content 1fr;
+  
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -175,14 +185,23 @@ select {
 }
 
 .grid-container {
-  display: grid;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 4rem;
+}
+
+.grid-container p:not([class]) {
+  max-width: 50ch;
 }
 
 
 @media (min-width: 45rem) {
     .grid-container {
+      text-align: left;
       column-gap: var(--container-gap, 2rem);
-      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+      grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
     }
 
     .grid-container > *:first-child{
@@ -191,6 +210,11 @@ select {
 
     .grid-container > *:last-child{
       grid-column: 3;
+    }
+
+    .grid-container--home {
+      padding-bottom: max(6rem, 20vh);
+      align-items: end;
     }
 }
 
@@ -349,6 +373,22 @@ h1, h2, h3, h4, h5, h6, p {
   backdrop-filter: blur(1.5rem);
 }
 
+@media (max-width: 35rem) {
+  .primary-navigation {
+    --underline-gap: 2rem;
+    position: fixed;
+    z-index: 1000;
+    flex-direction: column;
+    inset: 0 0 0 20%;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    background: hsl( var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
+  }
+}
+
+
 .primary-navigation a {
   text-decoration: none;
 }
@@ -419,3 +459,31 @@ h1, h2, h3, h4, h5, h6, p {
 .numbers > [aria-selected="true"] {
   background-color: hsl( var(--clr-white) / 1); 
 }
+
+/* -------------------------------- */
+/* --- Page specific background --- */
+/* -------------------------------- */
+
+body {
+  background-size: cover;
+  background-position: bottom center;
+}
+
+
+/* --- Página Home --- */
+.home {
+  background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+  .home {
+      background-position: center center;
+      background-image: url(./assets/home/background-home-tablet.jpg);
+  }
+}
+
+@media (min-width: 45rem) {
+  .home {
+      background-image: url(./assets/home/background-home-desktop.jpg);
+  }
+} 
