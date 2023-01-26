@@ -373,22 +373,6 @@ h1, h2, h3, h4, h5, h6, p {
   backdrop-filter: blur(1.5rem);
 }
 
-@media (max-width: 35rem) {
-  .primary-navigation {
-    --underline-gap: 2rem;
-    position: fixed;
-    z-index: 1000;
-    flex-direction: column;
-    inset: 0 0 0 20%;
-    list-style: none;
-    padding: min(20rem, 15vh) 2rem;
-    margin: 0;
-    background: hsl( var(--clr-white) / 0.05);
-    backdrop-filter: blur(1.5rem);
-  }
-}
-
-
 .primary-navigation a {
   text-decoration: none;
 }
@@ -399,12 +383,49 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+.mobile-nav-toggle {
+  display: none;
+}
+
+
+@media (max-width: 35rem) {
+  .primary-navigation {
+    --underline-gap: 1rem;
+    position: fixed;
+    z-index: 1000;
+    flex-direction: column;
+    inset: 0 0 0 30%;
+    padding: min(20rem, 15vh) 2rem;
+  }
+
+  .primary-navigation.underline-indicators > * {
+    border: 0;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(./assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+  }
+
+}
+
+
 .underline-indicators > * {
   cursor: pointer;
   padding: var(--underline-gap, .5rem) 0;
   border: 0;
-  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
   background-color: transparent;
+  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
 .underline-indicators > *:hover,
