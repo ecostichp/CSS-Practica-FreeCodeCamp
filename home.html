@@ -15,15 +15,17 @@
     <!-- Mi hoja de estilos -->
     <link rel="stylesheet" href="index.css">
 
+    <!-- Mi hoja de scripts -->
+    <script src="index.js" defer></script>
 </head>
 <body class="home">
     <header class="primary-header flex">
         <div>
             <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
         </div>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
         <nav>
-            <ul id="primary-navigation" class="primary-navigation underline-indicators flex">
+            <ul id="primary-navigation" mostrar-menu-mobile="false" class="primary-navigation underline-indicators flex">
                 <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="home.html"><span>00</span>Home</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span>01</span>Hovered</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span>02</span>Crew</a></li>

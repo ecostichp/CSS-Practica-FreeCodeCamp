@@ -383,6 +383,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
+/* CSS para el menú del celular */
+
 .mobile-nav-toggle {
   display: none;
 }
@@ -396,6 +398,12 @@ h1, h2, h3, h4, h5, h6, p {
     flex-direction: column;
     inset: 0 0 0 30%;
     padding: min(20rem, 15vh) 2rem;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+
+  .primary-navigation[mostrar-menu-mobile="true"] {
+    transform: translateX(0);
   }
 
   .primary-navigation.underline-indicators > * {
@@ -405,10 +413,10 @@ h1, h2, h3, h4, h5, h6, p {
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    z-index: 2000;
+    z-index: 1001;
     right: 1rem;
     top: 2rem;
-    background: transparent;
+    background: none;
     background-image: url(./assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -416,6 +424,16 @@ h1, h2, h3, h4, h5, h6, p {
     aspect-ratio: 1;
     border: 0;
   }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(./assets/shared/icon-close.svg);
+  }
+
+  .mobile-nav-toggle:focus-visible {
+    outline: 5px solid white;
+    outline-offset: 5px;
+  }
+
 
 }
 
