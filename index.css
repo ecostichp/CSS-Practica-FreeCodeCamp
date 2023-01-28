@@ -239,6 +239,21 @@ select {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl( var(--clr-white) );
+  color: hsl( var(--clr-dark) ); 
+  padding: .5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
 
 
 /* -------------- */
@@ -368,6 +383,7 @@ h1, h2, h3, h4, h5, h6, p {
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
+  padding-inline: clamp(3rem, 7vw, 7rem);
   margin: 0;
   background: hsl( var(--clr-white) / 0.05);
   backdrop-filter: blur(1.5rem);
@@ -434,6 +450,33 @@ h1, h2, h3, h4, h5, h6, p {
     outline-offset: 5px;
   }
 
+}
+
+
+/* Para desaparecer los números del menú del Nav en las tablets */
+@media (min-width: 35em) and (max-width: 44.9999em) {
+  .primary-navigation a > span {
+      display: none;
+  }
+}
+
+
+/* Para el Nav de Large-Devices */
+@media (min-width: 45em) {
+    
+  .primary-header::after {
+      content: '';
+      z-index: 1;
+      height: 1px;
+      width: 100%;
+      margin-right: -2.5rem;
+      background: hsl( var(--clr-white) / .25);
+  }
+  
+  nav {
+    order: 1;
+    margin-block: 2rem;
+  }
 
 }
 
